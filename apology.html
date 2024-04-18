@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apology</title>
+    <style>
+        body {
+            background-color: #FFF8E1; /* Cream background */
+            font-family: Arial, sans-serif;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+        }
+        .envelope {
+            position: relative;
+            width: 300px;
+            height: 200px;
+            background-image: url('https://images.pexels.com/photos/4226727/pexels-photo-4226727.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'); /* Envelope image URL */
+            background-size: cover;
+            cursor: pointer;
+            margin: 50px auto;
+            animation: bounce 1s infinite alternate; /* Bounce animation */
+        }
+        @keyframes bounce {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-20px);
+            }
+        }
+        .open-me {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 24px;
+            font-weight: bold;
+            color: red;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        h1 {
+            color: #FF1493; /* Hot pink */
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .signature {
+            font-style: italic;
+            color: #999;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="envelope" onclick="showApologyMessage()">
+        <div class="open-me">Tap Me</div>
+    </div>
+    <div class="hidden" id="apologyMessage">
+        <h1>I'm sorry baby girl. 😞 </h1>
+        <p>
+            I'm sorry for my mistake, please forgive me.
+        </p>
+        <p>
+             I was a big asshole for saying all of that to you, I hate myself for it, I'm really sorry baby, please forgive me. I won't let anyone or anything ever get in-between us again. I promise. 
+        </p>
+        <p class="signature">
+            - Your babe. 🥺
+        </p>
+    </div>
+    <script>
+        function showApologyMessage() {
+            var apologyDiv = document.getElementById("apologyMessage");
+            apologyDiv.classList.remove("hidden");
+        }
+    </script>
+</body>
+</html>
